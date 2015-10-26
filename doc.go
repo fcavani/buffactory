@@ -6,35 +6,35 @@
 // Create the BufferFactory struct first. The values in
 // the struct is application dependent, you have to find
 // it ourselve.
-//{
-// bufmaker = &buffactory.BufferFactory{
-// 	  NumBuffersPerSize: 100,
-// 	  MinBuffers: 10,
-// 	  MaxBuffers: 1000,
-// 	  MinBufferSize: 1024,
-//	  MaxBufferSize: 4096,
-// 	  Reposition: 10 *time.Second,
-// }
-//}
+//
+// 	bufmaker = &buffactory.BufferFactory{
+//		NumBuffersPerSize: 100,
+//		MinBuffers: 10,
+//		MaxBuffers: 1000,
+//		MinBufferSize: 1024,
+//		MaxBufferSize: 4096,
+// 		Reposition: 10 *time.Second,
+//	}
+//
 //
 // Than init the struct:
-// {
-// err := bufmaker.StartBufferFactory()
-// if err != nil {
-// 	  ...
-// }
-// }
+// 
+//	err := bufmaker.StartBufferFactory()
+//	if err != nil {
+//		...
+// 	}
+// 
 // To request one buffer:
-// {
-// buf := bufmaker.Request(1024)
-// }
+// 
+// 	buf := bufmaker.Request(1024)
+// 
 //
 // To return this buffer to the pool:
-// {
-// bufmaker.Return(buf)
-// }
+// 
+// 	bufmaker.Return(buf)
+// 
 // Remember to close it in the end:
-// {
-// bufmaker.Close()
-// }
+// 
+// 	bufmaker.Close()
+// 
 package buffactory
